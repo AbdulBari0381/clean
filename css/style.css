@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    /* scroll-behavior: smooth; */
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+/* -------------------------------------------------navbar-------- */
+.con-nav {
+    margin-top: 30px;
+    width: 100%;
+    height: 64px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 0px 10px;
+}
+
+.con-nav .nav {
+    max-width: 1500px;
+    height: 100%;
+    margin: auto;
+}
+
+.nav .burger {
+
+    height: 64px;
+    float: right;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.burger .line {
+    width: 40px;
+    border-radius: 10px;
+    height: 4px;
+    margin: 2px;
+    background-color: #1196cc;
+}
+
+.nav .logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    float: left;
+
+}
+
+.logo p {
+    margin: 6px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.nav .navbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    float: right;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.navbar a:hover {
+    color: #1196cc;
+}
+
+.navbar button {
+    padding: 15px 30px;
+    background-color: #1196cc;
+    border: none;
+    border-radius: 7px 20px;
+    color: white;
+}
+
+@media screen and (max-width:950px) {
+    .nav .navbar {
+        height: 0px;
+        overflow: hidden;
+        padding: 0px;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        transition: all 0.2s;
+    }
+
+    .nav .burger {
+        display: flex;
+    }
+
+    .con-nav .nav .res-nav {
+        height: 338px;
+        padding: 30px 0px;
+        transition: all 0.5s;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+}
+
+nav{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: white;
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1196cc;
+}
+nav .social i,
+nav .social a{
+    color: #1196cc;
+    margin: 0px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+nav .social a{
+    text-decoration: none;
+}
+
+.tell{
+    font-size: 10px;
+}
+/* --------------------------------------------------------------landing-page---------- */
+.con-landing {
+    max-width: 1400px;
+    height: 400px;
+    margin: auto;
+    font-family: 'Nunito Sans';
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+
+.con-landing .landing-page {
+    padding: 0px 100px;
+    float: left;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.con-landing .img {
+    /* width: 40%; */
+    height: 100%;
+    padding: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.landing-page span {
+    color: #1196cc;
+    font-weight: bold;
+}
+
+.landing-page h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.landing-page p {
+    margin: 10px 0px 30px 0px;
+    color: black;
+}
+
+.landing-page button {
+    padding: 15px 30px;
+    background-color: #1196cc;
+    border: none;
+    border-radius: 7px 20px;
+    color: white;
+}
+
+@media screen and (max-width:950px) {
+    .con-landing .landing-page {
+        width: 100%;
+        height: 600px;
+    }
+
+    .con-landing .img {
+        display: none;
+    }
+
+    .con-landing {
+        background-image: none;
+    }
+
+    .con-landing p {
+        color: rgba(0, 0, 0, 0.699);
+    }
+
+    .con-landing p {
+        color: rgba(0, 0, 0, 0.699);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .landing-page h1 {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .con-landing .landing-page {
+        padding: 40px;
+    }
+}
+
+/* ------------------------services--------- */
+.con-services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.con-services a {
+    text-decoration: none;
+}
+
+.services {
+    display: flex;
+    min-width: 200px;
+    align-items: center;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.services .icon {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .icon i {
+    font-size: 60px;
+    color: #1196cc;
+}
+
+.services:hover {
+    background-color: #1196cc;
+    color: white;
+}
+
+.services:hover i {
+    color: white;
+}
+
+.con-services #custom-services {
+    background-color: #1196cc;
+    color: white;
+}
+
+#custom-services .icon i {
+    color: white;
+}
+
+.con-ser {
+    width: 100%;
+    height: 400px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 0) 0%, rgba(17, 150, 204, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.s {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------------------services--point-------- */
+.con-s-p {
+    width: 100%;
+    height: 300px;
+    background-color: #2986aa;
+    margin: 60px auto;
+    /* background-image: url(../img/pexels-andrea-piacquadio-3768910.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.con-s-p .item {
+    width: 100%;
+    height: 100%;
+    background-color: #1197ccc7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item .items {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.item i {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.877);
+}
+
+.items p {
+    margin: 10px 0px;
+}
+
+.items:hover i {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .con-s-p {
+        height: 750px;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .items {
+        margin: 30px;
+    }
+}
+
+/* -----------------------------------------------------------------care---------------- */
+.con-care {
+    max-width: 1200px;
+    display: flex;
+    padding: 30px 30px;
+    font-family: 'Nunito Sans';
+    margin: 60px auto;
+}
+
+.con-care .img {
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-right: 40px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+.con-care .contant {
+    width: 700px;
+    padding: 10px 40px;
+    font-weight: lighter;
+}
+
+.contant .logo {
+    padding: 10px 0px;
+}
+
+.con-care .logo img {
+    width: 70px;
+    padding: 10px 0px;
+    margin-right: 10px;
+}
+
+.con-care button {
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #1196cc;
+    border-radius: 10px 20px;
+}
+
+@media screen and (max-width:750px) {
+    .con-care {
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+
+    .con-care .img {
+        min-width: 300px;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .con-care .contant {
+        width: 100%;
+        padding: 20px 0px;
+    }
+}
+
+/* -------------------------------------in-blog-- */
+/* .blog-container {
+    max-width: 1000px;
+    padding: 0px 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-container .card {
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+
+.card-body h4 {
+    margin: 10px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-body p {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    color: rgb(70, 68, 68);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.card-body button,
+.s button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1196cc;
+    color: white;
+    font-size: 12px;
+} */
+
+/* -----------------------------footer---------- */
+.con-footer {
+    width: 100%;
+    background-color: #1197cc1e;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.con-footer .footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer h2{
+    margin: 10px 0px;
+}
+.con-footer a{
+    margin: 5px 0px;
+    text-decoration: none;
+}
+.footer .logo,
+.footer .social,
+.footer .pages{
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .logo{
+    padding: 50px;
+}
+.logo img{
+    width: 100%;
+}
+.con-footer .social i{
+    color: #1196cc;
+    font-size: 25px;
+}
+.con-footer footer {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    color: black;
+    height: 60px;
+    font-size: small;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a{
+    padding: 0px 10px;
+    color: black;
+}
+@media screen and (max-width:750px) {
+    .con-footer .footer{
+        grid-template-columns: 1fr;
+    }
+}
+/* -------------------------------------services------------ */
+   
+.con-service{
+    max-width: 1300px;
+    display: flex;
+    padding: 10px 30px;
+    font-family: 'Nunito Sans';
+    margin: 30px auto;
+    margin-bottom: 70px;
+}
+.con-service .img{
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con-service .img img{
+    width: 100%;
+    background-size: cover;
+}
+.con-service .contant{
+    max-width: 700px;
+    padding: 10px 50px ;
+    font-weight: lighter;
+}
+.con-service .text{
+    margin: 15px 0px;
+}
+.contant h1{
+    margin: 4px 0px;
+}
+.con-service .contant button{
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #1196cc;
+    border-radius: 10px 20px;
+    margin-right: 10px;
+}
+@media screen and (max-width:750px) {
+    .con-service{
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 20px ;
+    }
+    .con-service .img{
+        min-width: 300px;
+        width: 100%;
+        padding: 0px;
+    }
+    .con-service .contant{
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .con-service .contant h1{
+        margin: 0px 0px;
+    }
+}
+/* --------------------------------------------book-online-- */
+
+.contanir {          
+    max-width: 800px;
+    height: 78vh;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.book-online{
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(192, 192, 192, 0.781);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.book-online form{
+    padding: 20px;
+    max-width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 10px;
+}
+.book-online h2{
+    padding: 15px;
+}
+.book-online form input{
+    width: 95%;
+}
+form #submit{
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+}
+.book-online .cross{
+    padding: 0px 15px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.res-online{
+    display: flex;
+}
+/* --------------popup-------- */
+.popup{
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 64px;
+    padding:0px 20px;
+    transition: all 0.5;
+}
+.pop{
+    margin: auto;
+    max-width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1197cc80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.pop .icon{
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #1196cc;
+    color: white;
+    margin-right: 20px;
+}
+.pop .cross{
+    font-size: 30px;
+    color: white;
+    margin-left: 60px;
+    cursor: pointer;
+}
+.pop .cross:hover{
+    color: black;
+}
+.close_pop{
+    display: none;
+    transition: all 0.5;
+    display: block;
+}
+/* -----------------------------priceing- */
+.table{
+    max-width: 1000px;
+    margin: auto;  
+    margin-top: 20px;
+    padding: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th {
+    background-color: #1196cc;
+    color: white;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(192, 192, 192, 0.204);
+
+}
